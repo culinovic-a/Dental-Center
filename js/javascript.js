@@ -1,6 +1,6 @@
+$(document).ready(function() {
 
 // FORM VALIDATION
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
   window.addEventListener('load', function() {
@@ -20,8 +20,36 @@
 })();
 
 
+
+// SMOOTH SCROLLING
+$("#nav ul li a[href^='#']").on('click', function(e) {
+  // prevent default anchor click behavior
+  e.preventDefault();
+  // animate
+  $('html, body').animate({
+      scrollTop: $(this.hash).offset().top
+    }, 300, function(){
+      // when done, add hash to url
+      // (default click behaviour)
+      window.location.hash = this.hash;
+    });
+});
+
+
+
 // SCROLLSPY
 $('body').scrollspy({
   target: '#mainNav',
   offset: 56
+});
+
+
+
+// DATE-TIME PICKER 
+$('#datetimepicker3, #datetimepicker4, #datetimepicker5, #datetimepicker6').datetimepicker({
+  format:'d.m.Y H:i',
+  inline:true,
+  lang:'ru'
+});
+
 });

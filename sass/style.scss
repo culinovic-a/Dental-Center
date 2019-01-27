@@ -5,6 +5,10 @@ $text-color: #424242;
     font-family: 'Kanit', sans-serif;
     color: $text-color;
 }
+
+html {
+    scroll-behavior: smooth;
+}
     
 .navbar {
     background-color: #696969;
@@ -94,6 +98,9 @@ h2 {
     padding-top: 80px;
 }
 
+
+
+// SERVICES
 .services {
     background-color: #f8f9fa;
     .container {
@@ -102,8 +109,12 @@ h2 {
         padding-bottom: 50px;
         }
     }
-    
+
     .btn {
+        border: 1px solid $text-color;
+    }
+    
+    .btn-dark {
         &:hover {
             background-color: #fff;
             color: $text-color;
@@ -123,7 +134,7 @@ h2 {
     background-position-y: 40%;
 
     h1 {
-        padding: 20px 0 10px 0;
+        padding: 70px 0 10px 0;
         color: white;
     }
 
@@ -270,7 +281,6 @@ h2 {
       }
     }  
 }
-
 /*OUR TEM*/
 .o-team {
     padding-top: 50px;
@@ -297,119 +307,12 @@ h2 {
 
 
 
-/*SMILE GALLERY*/
-.gallery {
-    width: 100%;
-
-    .carousel-caption {
-        background-color: $text-color;
-        opacity: 0.7;
-
-        p {
-            color: #fff;
-            font-size: 24px;
-        }
-    }
-
-     
-}
-
-
-
-
-/*BLOG*/
-.blog{
-    padding-bottom: 50px; 
-    background-color: #ddd;
-
-    .naslov {
-        padding: 50px 0;
-    }
-
-    .blog-item {
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-
-        figcaption {
-            position: absolute;
-            top: 100%;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            padding: 10px;
-            background: rgba(#424242, .6);
-            color: white;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            transition: top ease-in-out 250ms;
-
-           
-            .blog-title {
-                color: white;
-                margin-bottom: auto;
-            }
-
-            .blog-description {
-                color: white;
-            }
-
-            a{
-                cursor: pointer;
-            }
-
-            .blog-link {
-                text-decoration: none;
-                align-self: flex-start;
-                color: white;
-                padding: 5px 6px;
-                color: #FFF;
-                border: 2px solid white;
-                display: inline-block;
-                box-shadow: inset 0 0 0 0 #424242;
-                -webkit-transition: ease-out 1s;
-                -moz-transition: ease-out 1s;
-                transition: ease-out 1s;
-
-                img {
-                    width: 15px;
-                    height: 15px;
-                }
-                    
-
-                &:hover {
-                    box-shadow: inset 400px 0 0 0 #424242;
-                }
-            }
-
-            h2 {
-                margin: 0;
-                padding: 0;
-            }
-        }
-
-         &:hover figcaption,
-         &:focus figcaption {
-                top: 0;
-            }
-
-    }
-    
-}
-
-
-
-/*TESTIMONIALS*/
-
-
-
 /*CONTACT*/
 .contact {
     background-color: #f8f9fa;
 
     h1  {
-        padding: 50px 0;
+        padding: 70px 0;
     }
     a i {
         color: $text-color;
@@ -499,13 +402,32 @@ h2 {
 
 
 
-
 /*MODALS*/
+.modal-header {
+    background-color: $text-color;
+    color: #fff;
+
+    .close {
+        span{
+            color: #fff;
+        }
+    }
+}
+.btn-modal {
+    &:hover {
+        background-color: white;
+        color: $text-color;
+    }
+}
 .modal-footer {
+    background-color: $text-color;
     button {
+        background-color: #fff;
+        color: $text-color;
         &:hover {
             background-color: $text-color;
-            color: white;
+            color: #fff;
+            border: 1px solid white;
         }
     }
 }

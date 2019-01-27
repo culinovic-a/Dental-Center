@@ -11,12 +11,19 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <!-- PLUGINS -->
+    <link rel="stylesheet" href="plugins/datetimepicker-master/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="img/png" href="images/fav.png">
 
     <title>Dental Center</title>
   </head>
@@ -27,11 +34,10 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="#">Dental Center</a>
+        <a class="navbar-brand" href="#">De<span><img src="images/dentist.png"></span>tal Center</a>
         <button class="navbar-toggler" type="button"data-toggle="collapse" data-target="#navbarMenu">
           <i class="fas fa-bars"></i>
         </button>
-    
         <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -74,7 +80,7 @@
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation.</p>
-                <a href="#" class="btn btn-dark">No appointment</a>
+                <span class="btn">No appointment</span>
               </div>
             </div>
           </div>
@@ -85,7 +91,7 @@
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                   quis nostrud exercitation.</p>
-                <a href="#" class="btn btn-dark">Make an appointment</a>
+                <a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-dark">Make an appointment</a>
               </div>
             </div>
           </div>   
@@ -96,7 +102,7 @@
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation.</p>
-                <a href="#" class="btn btn-dark">Make an appointment</a>
+                <a href="#" data-toggle="modal" data-target="#modal2" class="btn btn-dark">Make an appointment</a>
               </div>
             </div>
           </div>
@@ -109,7 +115,7 @@
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                   quis nostrud exercitation.</p>
-                <a href="#" class="btn btn-dark">Make an appointment</a>
+                <a href="#" data-toggle="modal" data-target="#modal3" class="btn btn-dark">Make an appointment</a>
               </div>
             </div>
           </div>
@@ -120,7 +126,7 @@
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                   quis nostrud exercitation.</p>
-                <a href="#" class="btn btn-dark">Make an appointment</a>
+                <a href="#" data-toggle="modal" data-target="#modal4" class="btn btn-dark">Make an appointment</a>
               </div>
             </div>
           </div>
@@ -131,7 +137,7 @@
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                   quis nostrud exercitation.</p>
-                <a href="#" class="btn btn-dark">No appointment</a>
+                <span class="btn">No appointment</span>
               </div>
             </div>
           </div>
@@ -141,7 +147,6 @@
       
 
      
-
     <!-- ABOUT US -->
     <div class="about-us" id="about">
       <div class="container">
@@ -200,7 +205,9 @@
 
     <!-- OUR TEAM -->
     <div class="o-team">
-      <div class="text-center"><h1>Our Team</h1></div>
+      <div class="text-center">
+        <h1>Our Team</h1>
+      </div>
     <br>
     <div class="container">
       <div class="row">
@@ -243,13 +250,6 @@
 
 
 
-
-    <!-- TESTIMONIALS -->
-
-      
-
-
-
     <!-- CONTACT -->
     <div class="contact" id="contact">
       <div class="container">
@@ -273,26 +273,26 @@
             <div class="form-group col-md-4">
               <input type="name" class="form-control" id="inputName" placeholder="Name" required>
               <div class="invalid-feedback">
-                  Please provide a name.
+                Please provide a name.
               </div>
             </div>
             <div class="form-group col-md-4">
               <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
               <div class="invalid-feedback">
-                  Please provide a email.
+                Please provide a email.
                 </div>
             </div>
             <div class="form-group col-md-4">
-              <input type="number" class="form-control" id="inputNumber" placeholder="Number" required>
+              <input type="number" class="form-control" id="inputNumber" placeholder="Phone Number" required>
               <div class="invalid-feedback">
-                  Please provide a number.
+                Please provide a number.
               </div>
             </div>
           </div>
           <div class="row tra">
             <textarea class="form-control" id="textarea" rows="3" placeholder="Message" required></textarea>
             <div class="invalid-feedback">
-                Please provide a message.
+              Please provide a message.
               </div>
           </div>
           <div class="row">
@@ -310,22 +310,22 @@
     <div class="footer">
       <div class="container">
         <div class="row d-flex justify-content-between">
-        <div class="col-md-4 text-center">
-          <h6>Lorem Ipsum</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-        </div>
-        <div class="col-md-3 text-center">
-          <h6>Lorem Ipsum</h6>
-          <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div>
+          <div class="col-md-4 text-center">
+            <h6>Lorem Ipsum</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.</p>
+          </div>
+          <div class="col-md-3 text-center">
+            <h6>Lorem Ipsum</h6>
+            <ul>
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -333,18 +333,194 @@
 
 
     <!-- APPOINTMENT MODALS -->
-    
+    <!-- Oral health modal -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Oral Health Appointment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row d-flex justify-content-around">
+            <input id="datetimepicker3" type="text">
+              <div class="form">
+                <form>
+                  <div class="form-group">
+                    <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="inputNumber" placeholder="Phone Number" required>
+                  </div>
+                  <div class="form-group">                      
+                    <select class="selectpicker" title="Choose Your Dentist">
+                      <option>Lorem Ipsum</option>
+                      <option>John Doe</option>
+                      <option>Ipsum Lorem</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-modal btn-dark">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cosmetic dentistry modal -->
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cosmetic Dentistry Appointment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row d-flex justify-content-around">
+              <input id="datetimepicker4" type="text">
+              <div class="form">
+              <form>
+                  <div class="form-group">
+                    <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="inputNumber" placeholder="Phone Number" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="doctor">Choose Doctor</label>
+                    <br>                        
+                    <select  class="selectpicker" title="Choose Your Dentist">
+                      <option>Lorem Ipsum</option>
+                      <option>John Doe</option>
+                      <option>Ipsum Lorem</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-modal btn-dark">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Oral surgery modal -->
+    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Oral Surgery Appointment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row d-flex justify-content-around">
+              <input id="datetimepicker5" type="text">
+              <div class="form">
+                <form>
+                  <div class="form-group">
+                    <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="inputNumber" placeholder="Phone Number" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="doctor">Choose Doctor</label>
+                    <br>                        
+                    <select  class="selectpicker" title="Choose Your Dentist">
+                      <option>Lorem Ipsum</option>
+                      <option>John Doe</option>
+                      <option>Ipsum Lorem</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-modal btn-dark">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Orthodontics and endodontics modal -->
+    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Orthodontics and Endodontics Appointment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row d-flex justify-content-around">
+              <input id="datetimepicker6" type="text">
+              <div class="form">
+                <form>
+                  <div class="form-group">
+                    <input type="name" class="form-control" id="inputName" placeholder="Name" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="inputNumber" placeholder="Phone Number" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="doctor">Choose Doctor</label>
+                    <br>                        
+                    <select  class="selectpicker" title="Choose Your Dentist">
+                      <option>Lorem Ipsum</option>
+                      <option>John Doe</option>
+                      <option>Ipsum Lorem</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-modal btn-dark">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
       
 
 
         
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- PLUGINS -->
+    <script src="plugins/datetimepicker-master/jquery.js"></script>
+    <script src="plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
+    <!-- POPPER -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- JAVASCRIPT -->
     <script type="text/javascript" src="js/javascript.js"></script>
 
   </body>

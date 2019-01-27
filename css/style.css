@@ -2,6 +2,9 @@
   font-family: 'Kanit', sans-serif;
   color: #424242; }
 
+html {
+  scroll-behavior: smooth; }
+
 .navbar {
   background-color: #696969; }
   .navbar .active {
@@ -60,7 +63,9 @@ h2 {
   background-color: #f8f9fa; }
   .services .container .row {
     padding-bottom: 50px; }
-  .services .btn:hover {
+  .services .btn {
+    border: 1px solid #424242; }
+  .services .btn-dark:hover {
     background-color: #fff;
     color: #424242; }
 
@@ -75,7 +80,7 @@ h2 {
   /** timeline content **/
   /** media queries **/ }
   .about-us h1 {
-    padding: 20px 0 10px 0;
+    padding: 70px 0 10px 0;
     color: white; }
   .about-us .timeline {
     list-style: none;
@@ -186,75 +191,11 @@ h2 {
     font-size: 14px;
     font-weight: 300; }
 
-/*SMILE GALLERY*/
-.gallery {
-  width: 100%; }
-  .gallery .carousel-caption {
-    background-color: #424242;
-    opacity: 0.7; }
-    .gallery .carousel-caption p {
-      color: #fff;
-      font-size: 24px; }
-
-/*BLOG*/
-.blog {
-  padding-bottom: 50px;
-  background-color: #ddd; }
-  .blog .naslov {
-    padding: 50px 0; }
-  .blog .blog-item {
-    text-align: center;
-    position: relative;
-    overflow: hidden; }
-    .blog .blog-item figcaption {
-      position: absolute;
-      top: 100%;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      padding: 10px;
-      background: rgba(66, 66, 66, 0.6);
-      color: white;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      transition: top ease-in-out 250ms; }
-      .blog .blog-item figcaption .blog-title {
-        color: white;
-        margin-bottom: auto; }
-      .blog .blog-item figcaption .blog-description {
-        color: white; }
-      .blog .blog-item figcaption a {
-        cursor: pointer; }
-      .blog .blog-item figcaption .blog-link {
-        text-decoration: none;
-        align-self: flex-start;
-        color: white;
-        padding: 5px 6px;
-        color: #FFF;
-        border: 2px solid white;
-        display: inline-block;
-        box-shadow: inset 0 0 0 0 #424242;
-        -webkit-transition: ease-out 1s;
-        -moz-transition: ease-out 1s;
-        transition: ease-out 1s; }
-        .blog .blog-item figcaption .blog-link img {
-          width: 15px;
-          height: 15px; }
-        .blog .blog-item figcaption .blog-link:hover {
-          box-shadow: inset 400px 0 0 0 #424242; }
-      .blog .blog-item figcaption h2 {
-        margin: 0;
-        padding: 0; }
-    .blog .blog-item:hover figcaption, .blog .blog-item:focus figcaption {
-      top: 0; }
-
-/*TESTIMONIALS*/
 /*CONTACT*/
 .contact {
   background-color: #f8f9fa; }
   .contact h1 {
-    padding: 50px 0; }
+    padding: 70px 0; }
   .contact a i {
     color: #424242;
     font-size: 25px;
@@ -309,8 +250,24 @@ h2 {
         border-bottom: 1px solid #fff; }
 
 /*MODALS*/
-.modal-footer button:hover {
+.modal-header {
   background-color: #424242;
-  color: white; }
+  color: #fff; }
+  .modal-header .close span {
+    color: #fff; }
+
+.btn-modal:hover {
+  background-color: white;
+  color: #424242; }
+
+.modal-footer {
+  background-color: #424242; }
+  .modal-footer button {
+    background-color: #fff;
+    color: #424242; }
+    .modal-footer button:hover {
+      background-color: #424242;
+      color: #fff;
+      border: 1px solid white; }
 
 /*# sourceMappingURL=style.css.map */
